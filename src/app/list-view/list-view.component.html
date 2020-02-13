@@ -4,10 +4,10 @@
  </mat-card-header>
 
 <mat-list  role="list" *ngFor="let product of products | paginate:{itemsPerPage: 6, currentPage:p}"> 
-    <a mat-list-item href="/detail-view/{{product.id}}" role="listitem" >{{product.name}}</a>
+    <a [ngStyle]="{'color': product.color, 'font-weight': 900}" mat-list-item href="/detail-view/{{product.id}}" role="listitem" >{{product.id}}. {{product.name}}</a>
 </mat-list>
 
- <pagination-controls (pageChange)="p=$event"></pagination-controls>
+ <pagination-controls [ngStyle]="{'color': 'red'}" (pageChange)="p=$event"></pagination-controls>
 
 </mat-card>
  <nav style="text-align: center;">

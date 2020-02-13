@@ -1,18 +1,88 @@
 {
   "products": [
-    { "id": 1, "name": "product 1" },
-    { "id": 2, "name": "product 2" },
-    { "id": 3, "name": "product 3" },
-    { "id": 4, "name": "product 4" },
-    { "id": 5, "name": "product 5" },
-    { "id": 6, "name": "product 6" },
-    { "id": 7, "name": "product 7" },
-    { "id": 8, "name": "product 8" },
-    { "id": 9, "name": "product 9" },
-    { "id": 10, "name": "product 10" },
-    { "id": 11, "name": "product 11" },
-    { "id": 12, "name": "product 12" },
-    { "id": 13, "name": "product 13" },
-    { "id": 14, "name": "product 14" }
+    {
+      "id": 1,
+      "name": "Lenovo ThinkPad",
+      "description": "Lenovo ThinkPad X1 Carbon 3 Mobiles Notebook | Intel i7 2.6 GHz Prozessor | 8 GB Arbetsspeicher | 256 GB SSD | 14 Zoll Display, UHD, 2560x1440 IPS | Windows 10 Pro | D68 (Generaluberholt)",
+      "color": "red"
+    },
+    {
+      "id": 2,
+      "name": "Dell Notebook",
+      "description": "Dell Notebook Laptop Latitude E7240 i5 1,9 GHz 8GB 128GB SSD Windows10 Pro Camera 12Zoll Gebraucht Mobile (Generalüberholt) ",
+      "color": "blue"
+    },
+    {
+      "id": 3,
+      "name": "product 3",
+      "description": "description of product 1",
+      "color": "green"
+    },
+    {
+      "id": 4,
+      "name": "product 4",
+      "description": "description of product 1",
+      "color": "violet"
+    },
+    {
+      "id": 5,
+      "name": "product 5",
+      "description": "description of product 1",
+      "color": "maron"
+    },
+    {
+      "id": 6,
+      "name": "product 6",
+      "description": "description of product 1",
+      "color": "yellow"
+    },
+    {
+      "id": 7,
+      "name": "product 7",
+      "description": "description of product 1",
+      "color": "red"
+    },
+    {
+      "id": 8,
+      "name": "product 8",
+      "description": "description of product 1",
+      "color": "red"
+    },
+    {
+      "id": 9,
+      "name": "product 9",
+      "description": "description of product 1",
+      "color": "red"
+    },
+    {
+      "id": 10,
+      "name": "product 10",
+      "description": "description of product 1",
+      "color": "red"
+    },
+    {
+      "id": 11,
+      "name": "product 11",
+      "description": "description of product 1",
+      "color": "red"
+    },
+    {
+      "id": 12,
+      "name": "product 12",
+      "description": "description of product 1",
+      "color": "red"
+    },
+    {
+      "id": 13,
+      "name": "product 13",
+      "description": "description of product 1",
+      "color": "red"
+    },
+    {
+      "id": 14,
+      "name": "product 14",
+      "description": "description of product 1",
+      "color": "red"
+    }
   ]
 }

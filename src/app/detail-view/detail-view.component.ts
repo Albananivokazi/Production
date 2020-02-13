@@ -14,6 +14,6 @@ export class DetailViewComponent implements OnInit {
   product: any;
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
-    this.product = this.products.find(item => item.id === +this.id)
+    this.product = this.products.find(item => item.id === +this.id);
   }
 }

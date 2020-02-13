@@ -1,8 +1,10 @@
-<h1 style="text-align: center;" *ngIf="router.url == '/'">{{name}}</h1>
+<div>
+  <h1 style="text-align: center; margin-top: 300px;" *ngIf="router.url == '/'">{{name}}</h1>
 
-<nav style="text-align: center;">
-  
-  <a  routerLink="/list-view" replace *ngIf="router.url == '/'" >Go to List<i class="material-icons md-50"> forward</i> </a>
- 
-</nav>
-<router-outlet></router-outlet>
+  <nav style="text-align: center;">
+
+    <a routerLink="/list-view" replace *ngIf="router.url == '/'">Go to List<i class="material-icons md-50"> forward</i>
+    </a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

@@ -5,6 +5,16 @@
 .mat-card {
     padding: 60px !important;
 }
+
+
+.mat-card-header {
+    display: flex;
+    justify-content: center;
+}
+
+.mat-card-header .mat-card-title {
+    font-size: 34px;
+}
 .tp-card {
     width: 500px;
     height: 400px;
@@ -19,7 +29,8 @@
     background-color: salmon;
     background-size: cover;
  }
-html, body { height: 100%; }
-body { margin: 20px; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* html, body { height: 100%;  } */
+body { margin: 20px; font-family: Roboto, "Helvetica Neue", sans-serif; height: 100%; max-height: 100vh;}
 
 .material-icons { font-size: 50px; vertical-align: middle; }
+a {text-decoration: none;}
