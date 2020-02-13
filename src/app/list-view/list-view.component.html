@@ -1,0 +1,18 @@
+<mat-card class = "tp-card" >
+<mat-card-header>
+    <mat-card-title>Product List</mat-card-title>
+ </mat-card-header>
+
+<mat-list  role="list" *ngFor="let product of products | paginate:{itemsPerPage: 6, currentPage:p}"> 
+    <a mat-list-item href="/detail-view/{{product.id}}" role="listitem" >{{product.name}}</a>
+</mat-list>
+
+ <pagination-controls (pageChange)="p=$event"></pagination-controls>
+
+</mat-card>
+ <nav style="text-align: center;">
+  <a mat-icon  href="/" replace *ngIf="router.url == '/list-view'"><i class="material-icons">keyboard_backspace</i> Back to Home</a>
+</nav>
+<router-outlet></router-outlet>
+
+

@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import '~material-icons/iconfont/material-icons.css';
+.mat-card {
+    padding: 60px !important;
+}
+.tp-card {
+    width: 500px;
+    height: 400px;
+    display: inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 80px; 
+    padding: 60px; 
+   
+ }
+ .tp-header-image {
+    background-color: salmon;
+    background-size: cover;
+ }
+html, body { height: 100%; }
+body { margin: 20px; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.material-icons { font-size: 50px; vertical-align: middle; }
