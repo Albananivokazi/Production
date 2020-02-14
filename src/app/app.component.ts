@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   show: boolean;
-  name = 'Wellcome to my app';
+  name = 'Welcome to my app';
 
   constructor(public router: Router) {
   }

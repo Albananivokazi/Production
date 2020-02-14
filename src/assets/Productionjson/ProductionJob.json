@@ -14,32 +14,32 @@
     },
     {
       "id": 3,
-      "name": "product 3",
-      "description": "description of product 1",
+      "name": "Acer Aspire",
+      "description": "Notebook Laptop Acer Nitro 5 AN517-51-757H Gaming 17.3 i7-9750 16GB 512GB NEU",
       "color": "green"
     },
     {
       "id": 4,
-      "name": "product 4",
-      "description": "description of product 1",
+      "name": "ASUS ROG",
+      "description": "ASUS ROG GX701GVR-H6034R - 9th gen Intel Core i7 - 2,6 GHz (90NR02I1-M00640)",
       "color": "violet"
     },
     {
       "id": 5,
-      "name": "product 5",
-      "description": "description of product 1",
+      "name": "Sony Vaio",
+      "description": "Sony Vaio L12S1E/S.G4 61,0 cm 24 Zoll Intel Core 2 Duo E8400 3GHz WIN 10 TOP",
       "color": "maron"
     },
     {
       "id": 6,
-      "name": "product 6",
-      "description": "description of product 1",
-      "color": "yellow"
+      "name": "HP ZBook",
+      "description": "HP ZBook Studio X360 G5 15.6 Convertible Touch 4K UHD i9-8950HK 16GB 512GB P2000",
+      "color": "blue"
     },
     {
       "id": 7,
-      "name": "product 7",
-      "description": "description of product 1",
+      "name": "Microsoft Surface Pro",
+      "description": "Microsoft Surface Pro 7 12,3 (256GB SSD, Intel Core i7 10. Gen, 3,90GHz, 16GB) 2-in-1 Laptop - Mattschwarz - VNX-00018",
       "color": "red"
     },
     {
@@ -50,38 +50,38 @@
     },
     {
       "id": 9,
-      "name": "product 9",
-      "description": "description of product 1",
+      "name": "alienware-m17-r2-laptop",
+      "description": "9th Generation Intel Core i7-9750H 6-Core, 12MB Cache, up to 4.5GHz w/ Turbo Boost",
       "color": "red"
     },
     {
       "id": 10,
-      "name": "product 10",
-      "description": "description of product 1",
+      "name": "MSI GF75",
+      "description": "MSI GF75 9SD-056 Thin 17,3 Zoll (512GB SSD, NVIDIA GeForce GTX 1660 Ti 6GB, Intel Core i7-9750H, 2,60GHz, 16GB) Gaming-Notebook - Schwarz (0017F3-056)",
       "color": "red"
     },
     {
       "id": 11,
-      "name": "product 11",
-      "description": "description of product 1",
+      "name": "Panasonic Toughbook",
+      "description": "Panasonic Toughbook CF-20 MK2,Intel Core i5-7Y57,3,3Ghz,8GB,2TB SSD,DEMO",
       "color": "red"
     },
     {
       "id": 12,
-      "name": "product 12",
-      "description": "description of product 1",
+      "name": "Fujitsu Celsius",
+      "description": "Fujitsu Celsius H770 i7 7820HQ 2,9GHz 64GB 256GB SSD 15,6 Win 10 Pro M1200",
       "color": "red"
     },
     {
       "id": 13,
-      "name": "product 13",
-      "description": "description of product 1",
+      "name": "Huawei MateBook",
+      "description": "Huawei MateBook X Pro 2019 13.9'' 3K i7-8565U 8GB/512GB SSD MX250 Win10",
       "color": "red"
     },
     {
       "id": 14,
-      "name": "product 14",
-      "description": "description of product 1",
+      "name": "Acer Predator Helios 300",
+      "description": "Acer Predator Helios 300 PH317-53 - 9th gen Intel Core i7 - 2,6 GHz",
       "color": "red"
     }
   ]

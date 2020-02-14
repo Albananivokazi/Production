@@ -1,6 +1,6 @@
 <mat-card class = "tp-card" >
 <mat-card-header>
-    <mat-card-title>Product List</mat-card-title>
+    <mat-card-title>Products List</mat-card-title>
  </mat-card-header>
 
 <mat-list  role="list" *ngFor="let product of products | paginate:{itemsPerPage: 6, currentPage:p}"> 
@@ -14,5 +14,3 @@
   <a mat-icon  href="/" replace *ngIf="router.url == '/list-view'"><i class="material-icons">keyboard_backspace</i> Back to Home</a>
 </nav>
 <router-outlet></router-outlet>
-
-
