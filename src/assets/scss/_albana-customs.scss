@@ -1,0 +1,50 @@
+// Import library functions for theme creation.
+@import '~@angular/material/theming';
+
+// Define a mixin that accepts a theme and outputs the theme-specific styles.
+@mixin albana-customs($theme) {
+    // Extract the palettes you need from the theme definition.
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        font-family: Roboto;
+    }
+
+    mat-sidenav-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    mat-sidenav {
+       width: 250px;
+       height: calc(100vh - 64px);
+    }
+
+    .mat-sidenav-content {
+        height: calc(100vh - 64px) !important;
+    }
+
+    .p-3 {
+        padding: 24px;
+    }
+    .pt-3 {
+        padding-top: 24px;
+    }
+
+    .mat-list-item {
+        &.active {
+            .mat-list-item-content {
+                background-color: mat-color($primary);
+                color: mat-color($primary, 100)
+            }
+        }
+    }
+}

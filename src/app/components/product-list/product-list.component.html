@@ -1,0 +1,6 @@
+<mat-action-list>
+    <button mat-list-item (click)="select.emit(product)" *ngFor="let product of products"
+        [class.active]="product === selected">
+        {{product.id}}. {{product.name}}
+    </button>
+</mat-action-list>

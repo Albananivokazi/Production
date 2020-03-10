@@ -1,17 +1,30 @@
 import { NgModule, Input } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DetailViewComponent } from './detail-view/detail-view.component';
-import { ListViewComponent } from './list-view/list-view.component';
+import { DetailViewComponent } from './containers/detail-view/detail-view.component';
+import { ListViewComponent } from './containers/list-view/list-view.component';
+import { HomeComponent } from './containers/home/home.component';
 
 
 const routes: Routes = [
-  { path: 'list-view', component: ListViewComponent },
-  { path: 'detail-view/:id', component: DetailViewComponent }
+  {
+    path: '',
+    component: HomeComponent
+  },
+  { 
+    path: 'list-view',
+    component: ListViewComponent,
+    children: [{
+      path: ':id',
+      component: DetailViewComponent
+    }]
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,
-    { enableTracing: true })],
+  imports: [RouterModule.forRoot(routes, { 
+    enableTracing: false, 
+    useHash: true
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
