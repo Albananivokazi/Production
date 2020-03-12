@@ -21,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule  } from '@angular/material/table';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
+import { ExmapleModule } from './example/example.module';
 
 
 import { ListViewComponent } from './containers/list-view/list-view.component';
@@ -78,7 +79,8 @@ const COMPONENTS: Type<any>[] = [
 
     FlexLayoutModule,
     ReactiveFormsModule,
-    NgxJsonViewerModule
+    NgxJsonViewerModule,
+    ExmapleModule
   ],
   providers: [
     DataService

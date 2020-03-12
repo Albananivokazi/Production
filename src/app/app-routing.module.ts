@@ -4,6 +4,7 @@ import { DetailViewComponent } from './containers/detail-view/detail-view.compon
 import { ListViewComponent } from './containers/list-view/list-view.component';
 import { HomeComponent } from './containers/home/home.component';
 import { ProductionJobComponent } from './containers/production-job/production-job.component';
+import { DashboardComponent } from './example/components/dashboard/dashboard.component';
 
 
 const routes: Routes = [{
@@ -19,6 +20,9 @@ const routes: Routes = [{
   }, {
     path: 'production-jobs',
     component: ProductionJobComponent
+  }, {
+    path: 'example',
+    component: DashboardComponent
   }
 ];
 
