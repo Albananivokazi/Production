@@ -5,11 +5,12 @@
   </button>
 </mat-toolbar>
 <mat-sidenav-container>
-    <mat-sidenav mode="side" [opened]="sidenavOpened" class="p-3">
+    <mat-sidenav mode="side" [opened]="sidenavOpened" class="pt-3">
 
       <mat-nav-list>
         <a mat-list-item routerLink="/">Home</a>
-        <a mat-list-item routerLink="/list-view">List View </a>
+        <a mat-list-item routerLink="/list-view">List View</a>
+        <a mat-list-item routerLink="/production-jobs">Production Jobs</a>
       </mat-nav-list>
 
     </mat-sidenav>
@@ -29,6 +30,6 @@
     <a routerLink="/list-view" replace *ngIf="router.url == '/'">Go to List<i class="material-icons md-50"> forward</i>
     </a>
   </nav>
-  
+
   <router-outlet></router-outlet>
 </div-->

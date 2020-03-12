@@ -39,6 +39,12 @@
         padding-top: 24px;
     }
 
+    .no-wrap {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
     .mat-list-item {
         &.active {
             .mat-list-item-content {

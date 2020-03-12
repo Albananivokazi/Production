@@ -1,21 +1,34 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
+  productionJobs$ = new  BehaviorSubject<any[]>([]);
+  productionJobsLoading$ = new BehaviorSubject<boolean>(false);
+  productionJobsSnapshot: any[];
+
   products$ = new BehaviorSubject<any>([]);
   private productSnapshot: any[];
 
-  private counter = 0;
-
   constructor(
     private httpClient: HttpClient
-  ) {
-    
+  ) {}
+
+  loadProductionJobs(): void {
+    this.productionJobsLoading$.next(true);
+    this.httpClient.get<any[]>('../../assets/data/production-job.json')
+      .pipe(delay(2500))
+      .subscribe({
+        next: (data: any[]) => {
+          this.productionJobsSnapshot = data;
+          this.productionJobs$.next(data);
+          this.productionJobsLoading$.next(false);
+      }});
   }
 
   loadProducts(reload?: boolean): void {
@@ -24,11 +37,10 @@ export class DataService {
       return;
     }
 
-
     this.httpClient.get('../../assets/data/ProductionJob.json')
       .subscribe({
         next: (data: any) => {
-          this.productSnapshot = data.products.slice(this.counter);
+          this.productSnapshot = data.products;
           this.products$.next(this.productSnapshot);
         },
         error: (err) => console.log('Error', err)
@@ -37,7 +49,7 @@ export class DataService {
 
   saveProduct(product: any): void {
     const idx = this.productSnapshot.findIndex(p => p.id === product.id);
-    
+
     if (idx > -1) {
       this.productSnapshot.splice(idx, 1, product);
       this.products$.next([ ...this.productSnapshot ]);

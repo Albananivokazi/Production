@@ -16,35 +16,40 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DataService } from './services/data.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { NgxJsonViewerModule } from 'ngx-json-viewer';
 
 
 import { ListViewComponent } from './containers/list-view/list-view.component';
 import { DetailViewComponent } from './containers/detail-view/detail-view.component';
 import { HomeComponent } from './containers/home/home.component';
+import { ProductionJobComponent } from './containers/production-job/production-job.component';
 const CONTAINERS: Type<any>[] = [
   ListViewComponent,
   DetailViewComponent,
-  HomeComponent
-]
+  HomeComponent,
+  ProductionJobComponent
+];
 
 
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
 const COMPONENTS: Type<any>[] = [
   ProductListComponent,
   ProductDetailComponent,
   ProductFormComponent
-]
+];
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ...CONTAINERS,
-    ...COMPONENTS
+    ...COMPONENTS,
+    ProductionJobComponent
   ],
   entryComponents: [
     ProductFormComponent
@@ -65,9 +70,12 @@ const COMPONENTS: Type<any>[] = [
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+
     FlexLayoutModule,
     ReactiveFormsModule,
-    MatInputModule
+    NgxJsonViewerModule
   ],
   providers: [
     DataService
