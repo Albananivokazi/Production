@@ -1,27 +1,3 @@
-<div fxLayout fxLayoutGap="24px">
-    <div fxFlex="33.3">
-        <mat-card>
-            <mat-card-title>Production Jobs</mat-card-title>
-            <mat-card-content style="height: 400px; overflow-y: auto;">
-
-                <div class="p-3" fxLayout fxLayoutAlign="space-around" *ngIf="dataService.productionJobsLoading$ | async">
-                    <mat-spinner diameter="20" strokeWidth="3"></mat-spinner>
-                </div>
-
-
-                <mat-action-list *ngIf="!(dataService.productionJobsLoading$ | async)">
-                    <button mat-list-item class="no-wrap"
-                        (click)="select(productionJob)"
-                        [class.active]="productionJob === selected"
-                        *ngFor="let productionJob of dataService.productionJobs$ | async">
-                        <span>{{ productionJob.properties.name }}</span>
-                    </button>
-                </mat-action-list>
-            </mat-card-content>
-        </mat-card>
-    </div>
-
-    <div fxFlex="66.6">
-        <ngx-json-viewer [json]="selected" [expanded]="false"></ngx-json-viewer>
-    </div>
+<div>
+    <app-production-job-table [productionJobs]="dataService.productionJobs$ | async"></app-production-job-table>
 </div>

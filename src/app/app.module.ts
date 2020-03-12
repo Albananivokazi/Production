@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTableModule  } from '@angular/material/table';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 
 
@@ -37,10 +38,12 @@ const CONTAINERS: Type<any>[] = [
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ProductionJobTableComponent } from './components/production-job-table/production-job-table.component';
 const COMPONENTS: Type<any>[] = [
   ProductListComponent,
   ProductDetailComponent,
-  ProductFormComponent
+  ProductFormComponent,
+  ProductionJobTableComponent
 ];
 
 
@@ -48,8 +51,7 @@ const COMPONENTS: Type<any>[] = [
   declarations: [
     AppComponent,
     ...CONTAINERS,
-    ...COMPONENTS,
-    ProductionJobComponent
+    ...COMPONENTS
   ],
   entryComponents: [
     ProductFormComponent
@@ -72,6 +74,7 @@ const COMPONENTS: Type<any>[] = [
     MatFormFieldModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    MatTableModule,
 
     FlexLayoutModule,
     ReactiveFormsModule,

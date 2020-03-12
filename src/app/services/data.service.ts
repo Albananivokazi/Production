@@ -10,7 +10,7 @@ export class DataService {
 
   productionJobs$ = new  BehaviorSubject<any[]>([]);
   productionJobsLoading$ = new BehaviorSubject<boolean>(false);
-  productionJobsSnapshot: any[];
+  private productionJobsSnapshot: any[];
 
   products$ = new BehaviorSubject<any>([]);
   private productSnapshot: any[];
@@ -20,13 +20,23 @@ export class DataService {
   ) {}
 
   loadProductionJobs(): void {
+    if (this.productionJobsSnapshot) {
+      return;
+    }
+
     this.productionJobsLoading$.next(true);
+    
     this.httpClient.get<any[]>('../../assets/data/production-job.json')
-      .pipe(delay(2500))
       .subscribe({
         next: (data: any[]) => {
           this.productionJobsSnapshot = data;
-          this.productionJobs$.next(data);
+          this.productionJobs$.next(
+            data.sort((a, b) => {
+              const nameA = a?.properties.name;
+              const nameB = b?.properties.name;
+              return nameA.localeCompare(nameB);
+            })
+          );
           this.productionJobsLoading$.next(false);
       }});
   }
